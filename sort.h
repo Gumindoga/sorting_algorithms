@@ -1,11 +1,11 @@
-#ifndef SORT_H
-#define SORT_H
+#ifndef _SORT_H_
+#define _SORT_H_
 
+#include <unistd.h>
 #include <stdio.h>
-#include <stdlib.h>
 #include <string.h>
 #include <stdbool.h>
-#include <unistd.h>
+#include <stdlib.h>
 
 /**
  * struct listint_s - Doubly linked list node
@@ -32,4 +32,4 @@ void quick_sort(int *array, ssize_t start, ssize_t end, size_t n);
 int partition(int *array, ssize_t start, ssize_t end, size_t n);
 void swap(int *ax, int *bx);
 
-#endif /*SORT_H*/
+#endif /* _SORT_H_ */
