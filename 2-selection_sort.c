@@ -2,7 +2,7 @@
 
 /**
  * swap - swaps two integers
- * @ax: first integer 
+ * @ax: first integer
  * @bx: second integer
  * returns nothing
  */
@@ -15,9 +15,9 @@ void swap(int *ax, int *bx)
 }
 
 /**
- * selection sort - sorts an array of integers
+ * selection_sort - sorts an array of integers
  * using selection sort algorithm
- * @array: array to sort 
+ * @array: array to sort
  * @size: size of array
  * returns nothing
  */
