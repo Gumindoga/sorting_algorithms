@@ -83,9 +83,9 @@ bool are_identical(int *array, size_t size)
 	for (i = 1; i < size; i++)
 	{
 		if (array[i] != array[0])
-			return false;
+			return (false);
 	}
-	return true;
+	return (true);
 }
 
 /**
