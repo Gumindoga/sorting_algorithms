@@ -78,7 +78,9 @@ void q_sort(int *array, ssize_t start, ssize_t end, size_t n)
 
 bool are_identical(int *array, size_t size)
 {
-	for (size_t i = 1; i < size; i++)
+	size_t i;
+
+	for (i = 1; i < size; i++)
 	{
 		if (array[i] != array[0])
 			return false;
