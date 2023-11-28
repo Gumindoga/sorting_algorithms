@@ -44,5 +44,6 @@ typedef struct deck_node_s
 void qsort_deck(deck_node_t **deck, deck_node_t *lo, deck_node_t *hi);
 deck_node_t *divide(deck_node_t **deck, deck_node_t *lo, deck_node_t *hi);
 int card_face(const card_t *card);
+void sort_deck(deck_node_t **deck);
 
 #endif /* _DECK_H_ */
