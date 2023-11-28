@@ -25,12 +25,28 @@ void swap(int *ax, int *bx)
 
 int partition(int *array, ssize_t start, ssize_t end, size_t n)
 {
-	int pivot = array[end];
+	// Compute indices of middle element
+	ssize_t middle = start + (end - start) / 2;
+
+	// Sort the start, middle, and end elements
+	if (array[start] > array[middle])
+		swap(array + start, array + middle);
+	if (array[start] > array[end])
+		swap(array + start, array + end);
+	if (array[middle] > array[end])
+		swap(array + middle, array + end);
+
+	// Use the middle element as the pivot
+	int pivot = array[middle];
+
+	// Move the pivot to the end
+	swap(array + middle, array + end);
+
 	ssize_t i, j;
 
 	for (i = j = start; j < end; j++)
 	{
-		if (array[j] < pivot)
+		if (array[j] <= pivot)
 		{
 			if (i != j)
 			{
