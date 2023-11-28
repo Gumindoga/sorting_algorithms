@@ -32,5 +32,21 @@ int partition(int *array, ssize_t start, ssize_t end, size_t n);
 void swap(int *ax, int *bx);
 bool are_identical(int *array, size_t size);
 void q_sort(int *array, ssize_t start, ssize_t end, size_t n);
+void cocktail_sort_list(listint_t **list);
+void swap_nodes(listint_t **list, listint_t *node1, listint_t *node2);
+void counting_sort(int *array, size_t size);
+void merge(int *array, int *lower, int *upper, size_t size);
+void merge_sort(int *array, size_t size);
+void heap_sort(int *array, size_t size);
+void heap_it(int *array, size_t n, int i, size_t total_size);
+void radix_sort(int *array, size_t size);
+int find_max(int *array, size_t size);
+void counting_sort_radix(int *array, size_t size, int step);
+void sequence_compare(int direct, int *array, size_t size);
+void recursive_bitonic(int direct, int *array, size_t size);
+void bitonic_sort(int *array, size_t size);
+void quick_sort_hoare(int *array, size_t size);
+void hoare_recursion(int *array, size_t n, int start, int end);
+int hoare_scheme(int *array, size_t size, int start, int end);
 
 #endif /* _SORT_H_ */
