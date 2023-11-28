@@ -75,10 +75,11 @@ void q_sort(int *array, ssize_t start, ssize_t end, size_t n)
  * @size: The size of the array.
  */
 
+}
 void quick_sort(int *array, size_t size)
 {
 	if (array == NULL || size < 2)
 		return;
 
-	q_sort(array, 0, n - 1, size);
+	q_sort(array, 0, size - 1, size);
 }
