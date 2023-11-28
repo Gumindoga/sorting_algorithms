@@ -49,7 +49,7 @@ int partition(int *array, ssize_t start, ssize_t end, size_t n)
 }
 
 /**
- * quick_sort - Sorts an array of integers in ascending
+ * q_sort - Sorts an array of integers in ascending
  * order using the Quick sort algorithm.
  * @array: The array of integers.
  * @start: The starting index of the array subset to sort.
@@ -57,14 +57,14 @@ int partition(int *array, ssize_t start, ssize_t end, size_t n)
  * @n: The total size of the array.
  */
 
-void quick_sort(int *array, ssize_t start, ssize_t end, size_t n)
+void q_sort(int *array, ssize_t start, ssize_t end, size_t n)
 {
 	if (start < end)
 	{
 		int p = partition(array, start, end, n);
 
-		quick_sort(array, start, p - 1, n);
-		quick_sort(array, p + 1, end, n);
+		q_sort(array, start, p - 1, n);
+		q_sort(array, p + 1, end, n);
 	}
 }
 
@@ -80,5 +80,5 @@ void quick_sort(int *array, size_t size)
 	if (array == NULL || size < 2)
 		return;
 
-	quick_sort(array, 0, n - 1, size);
+	q_sort(array, 0, n - 1, size);
 }
