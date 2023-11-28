@@ -26,6 +26,9 @@ void swap(int *ax, int *bx)
 int partition(int *array, ssize_t start, ssize_t end, size_t n)
 {
 	ssize_t middle = start + (end - start) / 2;
+	int pivot;
+	ssize_t i;
+	ssize_t j;
 
 	if (array[start] > array[middle])
 		swap(array + start, array + middle);
@@ -34,11 +37,9 @@ int partition(int *array, ssize_t start, ssize_t end, size_t n)
 	if (array[middle] > array[end])
 		swap(array + middle, array + end);
 
-	int pivot = array[middle];
+	pivot = array[middle];
 
 	swap(array + middle, array + end);
-
-	ssize_t i, j;
 
 	for (i = j = start; j < end; j++)
 	{
