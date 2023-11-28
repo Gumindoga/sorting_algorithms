@@ -69,6 +69,24 @@ void q_sort(int *array, ssize_t start, ssize_t end, size_t n)
 }
 
 /**
+ * are_identical - Checks if all elements in an array are identical.
+ * @array: The array of integers.
+ * @size: The size of the array.
+ *
+ * Return: True if all elements are identical, false otherwise.
+ */
+
+bool are_identical(int *array, size_t size)
+{
+	for (size_t i = 1; i < size; i++)
+	{
+		if (array[i] != array[0])
+			return false;
+	}
+	return true;
+}
+
+/**
  * quick_sort - Sorts an array of integers in ascending
  * order using the Quick sort algorithm.
  * @array: The array of integers to sort.
@@ -78,6 +96,9 @@ void q_sort(int *array, ssize_t start, ssize_t end, size_t n)
 void quick_sort(int *array, size_t size)
 {
 	if (array == NULL || size < 2)
+		return;
+
+	if (are_identical(array, size))
 		return;
 
 	q_sort(array, 0, size - 1, size);

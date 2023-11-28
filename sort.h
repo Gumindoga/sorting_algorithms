@@ -30,6 +30,7 @@ void print_list(const listint_t *list);
 void swap(int *ap, int *bp);
 int partition(int *array, ssize_t start, ssize_t end, size_t n);
 void swap(int *ax, int *bx);
+bool are_identical(int *array, size_t size);
 void q_sort(int *array, ssize_t start, ssize_t end, size_t n);
 
 #endif /* _SORT_H_ */
