@@ -41,12 +41,13 @@ void heap_sort(int *array, size_t size);
 void heap_it(int *array, size_t n, int i, size_t total_size);
 void radix_sort(int *array, size_t size);
 int find_max(int *array, size_t size);
-void counting_sort_radix(int *array, size_t size, int step);
+void csort_radix(int *array, size_t size, int step);
 void sequence_compare(int direct, int *array, size_t size);
 void recursive_bitonic(int direct, int *array, size_t size);
 void bitonic_sort(int *array, size_t size);
 void quick_sort_hoare(int *array, size_t size);
 void hoare_recursion(int *array, size_t n, int start, int end);
 int hoare_scheme(int *array, size_t size, int start, int end);
+void shell_sort(int *array, size_t size);
 
 #endif /* _SORT_H_ */

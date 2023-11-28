@@ -2,8 +2,8 @@
 
 /**
  * swap - Swaps two integers in an array.
- * @a: The first integer to be swapped.
- * @b: The second integer to be swapped.
+ * @ax: The first integer to be swapped.
+ * @bx: The second integer to be swapped.
  */
 void swap(int *ax, int *bx)
 {
@@ -31,12 +31,10 @@ int hoare_scheme(int *array, size_t size, int start, int end)
 
 	while (1)
 	{
-		do
-		{
+		do{
 			i++;
 		} while (array[i] < pivot);
-		do
-		{
+		do{
 			j--;
 		} while (array[j] > pivot);
 

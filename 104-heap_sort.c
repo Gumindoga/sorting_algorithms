@@ -1,12 +1,26 @@
 #include "sort.h"
 
 /**
+ * swap - Swaps two integers in an array.
+ * @ax: The first integer to swap.
+ * @bx: The second integer to swap.
+ */
+
+void swap(int *ax, int *bx)
+{
+	int hold = *ax;
+	*ax = *bx;
+	*bx = hold;
+}
+
+/**
  * heap_it - turns array into max heap
  * @array: array to heap_it
  * @n: size of the heap
  * @j: root index
  * @total_size: original array size
  */
+
 void heap_it(int *array, size_t n, int j, size_t total_size)
 {
 	int max = j;

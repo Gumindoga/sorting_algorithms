@@ -41,6 +41,7 @@ void merge(int *array, int *lower, int *upper, size_t size)
  */
 void merge_sort(int *array, size_t size)
 {
+	int i;
 	int centre = size / 2;
 	int *lower, *upper;
 
@@ -52,9 +53,9 @@ void merge_sort(int *array, size_t size)
 	if (lower == NULL || upper == NULL)
 		return;
 
-	for (int i = 0; i < centre; i++)
+	for (i = 0; i < centre; i++)
 		lower[i] = array[i];
-	for (int i = centre; i < (int)size; i++)
+	for (i = centre; i < (int)size; i++)
 		upper[i - centre] = array[i];
 
 	merge_sort(lower, centre);

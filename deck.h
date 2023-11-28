@@ -1,6 +1,11 @@
 #ifndef _DECK_H_
 #define _DECK_H_
 
+#include <unistd.h>
+#include <stdio.h>
+#include <string.h>
+#include <stdbool.h>
+#include <stdlib.h>
 typedef enum kind_e
 {
 	SPADE = 0,
