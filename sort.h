@@ -28,7 +28,6 @@ void quick_sort(int *array, size_t size);
 void print_array(const int *array, size_t size);
 void print_list(const listint_t *list);
 void swap(int *ap, int *bp);
-void quick_sort(int *array, ssize_t start, ssize_t end, size_t n);
 int partition(int *array, ssize_t start, ssize_t end, size_t n);
 void swap(int *ax, int *bx);
 
